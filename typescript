@@ -1,0 +1,23 @@
+export function isPangram() {
+  var sent = prompt("Enter a sentence");
+  var c = 0;
+
+  for(let i = 65; i <= 90; i++)
+  {
+    if(sent.length > 25)
+    {
+      for(let j = 0; j < sent.length; j++)
+      {
+        if(sent.slice(j, j+1) == String.fromCharCode(i))
+        {
+          c++;
+        }
+      }
+    }
+  }
+
+  if(c == 26)
+    return true;
+  else
+    return false;
+}
